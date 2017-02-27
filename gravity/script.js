@@ -1,7 +1,10 @@
 //sets element to the variable $pic
 $("Document").ready(function(){
     $("#pic").click(function(){
-    $("#pic").animate({top: "+=400px"}, 400);
+    $('#ground').css('top', $('#ground').offset().top-80);
+    var pixels = $('#ground').css('top');
+    $('#ground').css('top', $('#ground').offset().top+80)
+    $("#pic").animate({top: pixels}, 400);
     console.log("hi");
     });
 });
